@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG TASK 1 - Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <article class="profile-card" data-testid="test-profile-card">
+      
+      <article class="card-profile">
+        <header>
+          <h2 data-testid="test=-username">mark Anthony</h2>
+        </header>
+
+
+
+        <figure>
+          <img
+            src="img/cartoon-character-hd-8k-vector-illustration-wallpaper-stock-image_915071-57255-removebg-preview.webp"
+            alt="avatar-image"
+          />
+        </figure>
+      </article>
+      
+      
+      <article class="card-details">
+        
+        <p data-testid="test-user-bio">
+          I'm a frontend Developer who loves building accessible, responsive web
+          apps .
+        </p>
+        <br>
+        <span data-testid="test-user-time"></span>
+ 
+
+        <nav  data-testid="test-user-social-links">
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+              >
+                <i class="ri-github-fill"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+  
+        <!-- HOBIES -->
+        <section class="hobbies" data-testid="test-user-hobbies">
+          <h3>Hobies</h3>
+          <ul>
+            <li>Coding</li>
+            <li>Music</li>
+            <li>Football</li>
+          </ul>
+        </section>
+  
+        <!-- DISLIKES -->
+  
+        <section class="dislikes" data-testid="test-user-dislike">
+          <h3>Dislikes</h3>
+          <ul>
+            <li>Slow Wifi</li>
+            <li>Procastination</li>
+            <li>Bugs</li>
+          </ul>
+        </section>
+
+      </article>
+
+    </article>
+  </body>
+
+  <script src="script.js"></script>
+</html>
