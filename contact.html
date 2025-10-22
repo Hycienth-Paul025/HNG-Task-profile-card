@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Frontend Wizards</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home </a></li>
+          <li><a href="about.html">About </a></li>
+          <li><a href="contact.html" aria-current="page">Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact Us</h1>
+
+      <div id="success-message" data-testid="test-contact-success">
+        Thank you! Your message has been successfully submitted.
+      </div>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Full Name </label>
+          <input
+            type="text"
+            id="contact-name"
+            data-testid="test-contact-name"
+            required
+            aria-required="true"
+            aria-describedby="error-name"
+            autocomplete="off"
+          />
+          <span
+            class="error-message"
+            id="error-name"
+            data-testid="test-contact-error-name"
+            role="alert"
+            aria-live="polite"
+            >Full Name is required.</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Email </label>
+          <input
+            type="email"
+            id="contact-email"
+            data-testid="test-contact-email"
+            required
+            aria-required="true"
+            aria-describedby="error-email"
+          />
+          <span
+            class="error-message"
+            id="error-email"
+            data-testid="test-contact-error-email"
+            role="alert"
+            aria-live="polite"
+            >A valid email (name@example.com) is required.</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="contact-subject">Subject </label>
+          <input
+            type="text"
+            id="contact-subject"
+            data-testid="test-contact-subject"
+            required
+            aria-required="true"
+            aria-describedby="error-subject"
+            autocomplete="off"
+          />
+          <span
+            class="error-message"
+            id="error-subject"
+            data-testid="test-contact-error-subject"
+            role="alert"
+            aria-live="polite"
+            >Subject is required.</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea
+            id="contact-message"
+            data-testid="test-contact-message"
+            required
+            aria-required="true"
+            aria-describedby="error-message"
+            autocomplete="off"
+          ></textarea>
+          <span
+            class="error-message"
+            id="error-message"
+            data-testid="test-contact-error-message"
+            role="alert"
+            aria-live="polite"
+            >Message must be at least 10 characters long.</span
+          >
+        </div>
+
+        <button type="submit" data-testid="test-contact-submit">
+          Send Message
+        </button>
+      </form>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

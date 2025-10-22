@@ -2,155 +2,251 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
 }
 
 body {
-  background: linear-gradient(to bottom, #1e5799 0%, #2989d8 54%, #7db9e8 100%);
-  color: black;
-  padding: 10px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #e6e6fa;
+}
+
+header {
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  color: #0056b3;
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-h3 {
-  font-size: 24px;
-  margin-block: 5px 10px;
+p {
+  line-height: 1.4;
 }
 
-h2,
-h3 {
-  color: #1e5799;
-  text-transform: uppercase;
-  text-align: center;
-}
-p, span {
-  font-weight: 500;
-  width: 100%;
-}
-
-span{
-  text-align: center;
-}
-
-nav {
-  margin-block: 15px;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-
-  column-gap: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: #2989d8;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #1e5799;
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-left: 5px solid #4b0082;
+  background-color: #f8f8ff;
+  border-radius: 4px;
 }
 
 .profile-card {
-  background: white;
-  padding: 20px;
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 20px;
+  /* margin: 0 auto; */
+
+  padding: 30px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 30px;
 }
 
-.card-profile {
-  width: 45%;
+.profile-details {
+  flex-grow: 1;
+  min-width: 50%;
 }
 
 figure {
-  width: 100%;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
 }
-
-figure:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: #cb8145;
-  filter: blur(10px);
-  opacity: 0.8;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-}
-
-img {
-  position: relative;
-  max-width: 400px;
-  max-height: 400px;
+.avatar-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 50%;
+  border: 4px solid #007bff;
 }
 
-.card-details {
-  width: 50%;
+.time-display {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  margin-bottom: 25px;
+}
+.social-links h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.social-list {
+  list-style: none;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  justify-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.social-list a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.social-list a:hover,
+.social-list a:focus {
+  background-color: #0056b3;
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
 }
 
-.hobbies li {
-  background: #0080006e;
-  color: green;
-  font-weight: 500;
-  padding: 5px 10px;
-  border-radius: 15px;
+.hobbies-section,
+.dislikes-section {
+  margin-top: 20px;
+  background: #ddd;
 }
 
-.dislikes li {
-  background: #ff000056;
-  color: red;
-  font-weight: 500;
-  padding: 5px 10px;
-  border-radius: 15px;
+.hobbies-section ul,
+.dislikes-section ul {
+  list-style: square;
+  padding-left: 20px;
 }
 
+.hobbies-section ul,
+.dislikes-section ul {
+  padding-top: 10px;
+}
+
+.hobbies-section li,
+.dislikes-section li {
+  padding-bottom: 8px;
+}
+
+/* GOal styling */
+
+.goals-list {
+  list-style: square;
+  padding-left: 10px;
+}
+
+.goals-list li {
+  line-height: 1.4;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+.error-message {
+  color: #d9534f;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none;
+}
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #d9534f;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #0056b3;
+}
+#success-message {
+  padding: 20px;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
-  h2 {
-    font-size: 22px;
+  nav ul {
+    justify-content: space-around;
   }
-
-  figure::before {
-    left: 50%;
+  main {
+    margin: 20px;
+    padding: 20px;
   }
 
   .profile-card {
     flex-direction: column;
-    padding: 10px;
-    padding-bottom: 20px;
-    width: 100%;
-    height: 100vh;
+    align-items: center;
   }
-
-  .card-profile,
-  .card-details {
-    width: 100%;
+  .profile-details {
+    min-width: 100%;
+    text-align: center;
+  }
+  figure {
+    margin-bottom: 20px;
+  }
+  .social-list {
+    justify-content: center;
   }
 }
